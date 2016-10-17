@@ -22,8 +22,12 @@ exports.handler = function(event, context) {
   process.env['PATH'] = process.env['PATH'] + ':' + process.env['LAMBDA_TASK_ROOT'];
 
   var exec = require('child_process').exec;
-  var cmd = './bin/mongodump --archive --db '.config.mongo.db.' --username '.config.mongo.username.' --password '.config.mongo.password.' --host '.config.mongo.host.'';
-  console.log(cmd);
+  var cmd = './bin/mongodump --archive';
+  cmd = cms + ' --db ' + config.mongo.db;
+  cmd = cms + ' --username ' + config.mongo.username;
+  cmd = cms + ' --password ' + config.mongo.password;
+  cmd = cms + ' --host ' + config.mongo.host;
+  // console.log(cmd);
 
   exec(cmd, function(error, stdout, stderr) {
     if (error){

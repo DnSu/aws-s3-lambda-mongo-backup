@@ -16,7 +16,15 @@ $ cp config.json.sample config.json
 Sample config.json
 
 ```
-json
+{
+  "bucket": "xxxx",
+  "mongo": {
+    "db": "xxxx",
+    "username": "xxxx",
+    "password": "xxxx",
+    "host": "xxxx:####"
+  }
+}
 ```
 
 
