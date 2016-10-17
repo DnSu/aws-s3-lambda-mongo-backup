@@ -1,0 +1,9 @@
+{
+	"bucket": "xxxx",
+  "mongo": {
+    "db": "xxxx",
+  	"username": "xxxx",
+  	"password": "xxxx",
+  	"host": "xxxx:####"
+  }
+}
